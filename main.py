@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 from random import randint, choice, shuffle
+import pyperclip
 
 YELLOW = "#FFF0CE"
 BLUE = "#0C356A"
@@ -25,6 +26,7 @@ def password_generator():
     main_password = "".join(password_list)
     password_entry.delete(0, END)
     password_entry.insert(0, main_password)
+    pyperclip.copy(main_password)
 
 
 # ----------------------------SAVE PASSWORD-----------------------------
